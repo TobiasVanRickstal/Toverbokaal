@@ -7,11 +7,11 @@
     <div>
       <ul>
         <li><router-link to="/Home"><h1>home</h1></router-link></li>
-        <li><router-link to="/About"><h1>about</h1></router-link></li>
         <li><router-link to="/Shop"><h1>shop</h1></router-link></li>
         <li><router-link to="/Care"><h1>care</h1></router-link></li>
+        <li><router-link to="/About"><h1>about</h1></router-link></li>
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
-        <li><router-link to="/Search"><i>search</i></router-link></li>
+        <li><router-link to="/Search"><i class="fas fa-search"></i></router-link></li>
         <li><router-link to="/Cart"><i>cart</i></router-link></li>
       </ul>
     </div>

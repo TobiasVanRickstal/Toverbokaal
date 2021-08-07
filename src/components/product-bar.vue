@@ -1,4 +1,5 @@
 <template>
+  <h1>Most popular products</h1>
   <div class="products">
       <div class="product" v-for="product in products" :key="product.id">
         <img :src="require(`../assets/terrarium00${product.id}.jpg`)" /><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
@@ -38,6 +39,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1{
+  margin: 0;
+  background-color: #97a89794;
+  padding: 25px 0px;
+  color: white;
+}
 .show{
   opacity: 0;
   position: absolute;

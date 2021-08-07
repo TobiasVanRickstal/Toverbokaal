@@ -7,18 +7,18 @@
         <router-link to="/Shop"><button>Shop now</button></router-link>
       </div>
     </div>
-    <Product/>
+    <ProductBar/>
   </div>
 </template>
 
 <script>
-import Product from '../components/product.vue';
+import ProductBar from '../components/product-bar.vue';
 
 
 export default {
   name: 'Home',
   components: {
-    Product
+    ProductBar
   }
 }
 </script>
