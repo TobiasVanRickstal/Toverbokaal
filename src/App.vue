@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nav/>
+    <font-awesome-icon icon="user-secret" />
     <router-view/>
     <Footer/>
   </div>
@@ -8,9 +9,6 @@
 </template>
 
 <script>
-// import { reactive, computed } from 'vue';
-// import { useRoute } from 'vue-router';
-// import { products } from '../assets/products';
 import Nav from './components/nav.vue';
 import Footer from './components/footer.vue';
 
@@ -19,11 +17,7 @@ export default {
   components: {
     Nav,
     Footer
-  },
-  // setup() {
-  //   const route = useRoute();
-  //   const productId = computed(() => route.params.productId);
-  // }
+  }
 }
 </script>
 

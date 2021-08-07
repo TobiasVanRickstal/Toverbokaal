@@ -5,8 +5,8 @@ import Shop from '../views/Shop.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/Home'
+    // https://www.codemag.com/Article/2101051/Routing-in-Vue3-Navigating-the-Options
   },
   {
     path: '/Home',
