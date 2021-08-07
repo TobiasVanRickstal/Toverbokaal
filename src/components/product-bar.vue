@@ -1,8 +1,8 @@
 <template>
-  <h1>Most popular products</h1>
+  <h2>Most popular products</h2>
   <div class="products">
       <div class="product" v-for="product in products" :key="product.id">
-        <img :src="require(`../assets/terrarium00${product.id}.jpg`)" /><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
+        <img :src="require(`../assets/terrarium00${product.id}.jpg`)"/><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
         <div class="show" v-on:click="GoToProduct">show more</div>
         <div class="available" v-if="!product.available">out of stock</div>
         <div class="caption">
@@ -39,11 +39,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1{
+@media screen and (min-width:320px) and (max-width:640px) {
+  h2{
+    width: 50%;
+    margin: 0;
+    background-color: #97a89794;
+    padding: 10% 0px 5% 0px;
+    color: white;
+    letter-spacing: 10px;
+  }
+  img{
+    width: 50%;
+  }
+}
+@media screen and (min-width:641px){
+  h2{
   margin: 0;
   background-color: #97a89794;
-  padding: 25px 0px;
+  padding: 25px 0px 10px 0px;
   color: white;
+  letter-spacing: 10px;
 }
 .show{
   opacity: 0;
@@ -112,5 +127,7 @@ h4{
   margin-bottom: 5px;
   font-size: 90%;
 }
+}
+
 
 </style>

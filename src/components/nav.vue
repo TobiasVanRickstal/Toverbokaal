@@ -5,7 +5,8 @@
     </router-link>
     
     <div>
-      <ul>
+      <div class="hamburger"><fa icon="bars"></fa></div>
+      <ul class="navigation">
         <li><router-link to="/Home"><h1>home</h1></router-link></li>
         <li><router-link to="/Shop"><h1>shop</h1></router-link></li>
         <li><router-link to="/Care"><h1>care</h1></router-link></li>
@@ -25,44 +26,78 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-img {
-  width: auto;
-  height: 80px;
+
+@media screen and (min-width:320px) and (max-width:640px) {
+  #nav{
+    width: 80%;
+    margin: auto;
+  }
+  img{
+    width: auto;
+    height: 150px;
+    margin-top: 15px;
+  }
+  .hamburger{
+    display: block;
+    position: fixed;
+    background-color: #97a89794;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    font-size: 150%;
+  }
+  .navigation{
+    display: none;
+  }
 }
-#nav{
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #97a89794;
-  padding: 0px 10%;
+@media screen and (min-width:641px){
+  .hamburger{
+    display: none;
+  }
+  .navigation{
+    display: flex;
+  }
+  img {
+    width: auto;
+    height: 80px;
+  }
+  #nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #97a89794;
+    padding: 0px 10%;
+  }
+  ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 21px;
+    transition: ease-in-out 0.2s;
+  }
+  ul li h1{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 100%;
+  }
+  ul li:nth-last-of-type(-n+2){
+    max-width: 100px;
+  }
+  li:hover{
+    color: white;
+    cursor: pointer;
+  }
 }
-ul{
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-ul li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 21px;
-  transition: ease-in-out 0.2s;
-}
-ul li h1{
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-size: 100%;
-}
-ul li:nth-last-of-type(-n+2){
-  max-width: 100px;
-}
-li:hover{
-  color: white;
-  cursor: pointer;
-}
+
+
 
 </style>
