@@ -18,11 +18,6 @@ const routes = [
     name: 'Shop',
     component: Shop
   },
-  // {
-  //   path: 'product/:productId',
-  //   name : 'Product',
-  //   component: 'Product'
-  // }
 ]
 
 const router = createRouter({

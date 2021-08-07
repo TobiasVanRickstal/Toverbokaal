@@ -2,10 +2,10 @@
   <div class="footer">
       <h2>toverbokaal</h2>
       <ul>
-          <li><router-link to="/">Contact us</router-link></li>
-          <li><router-link to="/">Delivery & shipment</router-link></li>
-          <li><router-link to="/">Legal terms</router-link></li>
-          <li><router-link to="/">Privacy police</router-link></li>
+          <li><router-link to="/Contact">Contact us</router-link></li>
+          <li><router-link to="/Info#Delivery">Delivery & shipment</router-link></li>
+          <li><router-link to="/Info#LegalTerms">Legal terms</router-link></li>
+          <li><router-link to="/Info#PrivacyPolicy">Privacy policy</router-link></li>
       </ul>
       <p id="bottom">&copy; Tobias Van Rickstal</p>
   </div>
@@ -24,8 +24,9 @@
     .footer{
         margin: 0;
         padding-top: 20px;
-        background-color: rgba(5, 5, 5, 0.397);
-        height: 300px;
+        margin-top: 5%;
+        background-color: rgba(5, 5, 5, 0.3);
+        height: auto;
     }
     .footer h2{
         letter-spacing: 10px;

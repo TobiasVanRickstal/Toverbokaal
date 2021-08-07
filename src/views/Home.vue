@@ -27,11 +27,12 @@ export default {
   
 }
 @media screen and (min-width:641px){
+  
   #space{
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding: 20% 0px;
+    padding: 8% 0px 8%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -39,13 +40,6 @@ export default {
   #mid-temple h1{
     letter-spacing: 10px;
     font-size: 250%;
-    padding: 0 10px;
-    border-radius: 3px;
-    background-color: rgba(5, 5, 5, 0.3);
-  }
-  #mid-temple h3{
-    background-color: rgba(5, 5, 5, 0.2);
-    border-radius: 3px;
   }
   #mid-temple button{
     background-color: transparent;

@@ -55,8 +55,8 @@ export default {
 @media screen and (min-width:641px){
   h2{
   margin: 0;
-  background-color: #97a89794;
-  padding: 25px 0px 10px 0px;
+  background-color: #97a8975b;
+  padding: 25px 0px 25px 0px;
   color: white;
   letter-spacing: 10px;
 }
@@ -94,7 +94,7 @@ img:hover + .show, .show:hover{
   flex-direction: row;
   align-content: center;
   justify-content: space-evenly;
-  background-color: #97a89794;
+  background-color: #97a8975b;
   width: 75%;
   height: 300px;
   padding: 0% 12.5%;
