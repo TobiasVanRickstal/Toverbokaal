@@ -16,7 +16,7 @@
     <div class="products">
       <div class="product" v-for="product in products" :key="product.id">
         <img :src="require(`../assets/terrarium00${product.id}.jpg`)" /><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
-        <div class="show" v-on:click="GoToProduct">show more</div>
+        <div class="show" v-on:click="GoToProduct" :id="product.id">show more</div>
         <div class="available" v-if="!product.available">out of stock</div>
         <div class="caption">
           <h4>{{ product.name }}</h4>
