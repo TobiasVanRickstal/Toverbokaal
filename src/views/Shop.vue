@@ -1,5 +1,6 @@
 <template>
   <div class="shop">
+
     <div class="filter">
       <div>
         <h3>Home // Shop</h3>
@@ -13,6 +14,7 @@
         </select>
       </div>
     </div>
+
     <div class="products">
       <div class="product" v-for="product in products" :key="product.id">
         <img :src="require(`../assets/terrarium00${product.id}.jpg`)" /><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
@@ -73,10 +75,11 @@ export default {
 </script>
 <style scoped>
 .shop{
-  background-color: #97a89794;
+  background-color: #97a8975b;
   width: 75%;
   margin: auto;
   padding-bottom: 25px;
+  margin-top: 25px;
 }
 .filter{
   display: flex;
@@ -88,6 +91,17 @@ export default {
 }
 .filter h3{
   margin: 0;
+}
+#sort{
+  width: 150px;
+  font-size: 120%;
+  color: white;
+  border: 3px solid white;
+  background-color: transparent;
+  padding: 5px;
+}
+#sort:focus{
+  color: black;
 }
 .show{
   opacity: 0;

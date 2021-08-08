@@ -3,7 +3,7 @@
   <div class="products">
       <div class="product" v-for="product in products" :key="product.id">
         <img :src="require(`../assets/terrarium00${product.id}.jpg`)"/><!--https://nuxtjs.org/docs/2.x/directory-structure/assets-->
-        <div class="show" v-on:click="GoToProduct">show more</div>
+        <router-link :to="'/Product/'+ product.id"><div class="show">show more</div></router-link>
         <div class="available" v-if="!product.available">out of stock</div>
         <div class="caption">
           <h4>{{ product.name }}</h4>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'shop',
   data() {
@@ -26,7 +28,7 @@ export default {
         {id: 3, name: 'Grow round', price: 86, available: true},
         {id: 4, name: 'Terrarium (small)', price: 15, available: true},
         {id: 5, name: 'Terrarium (medium)', price: 25, available: false}
-      ]
+    ]
     }
   },
   methods:{

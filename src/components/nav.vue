@@ -13,6 +13,13 @@
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
         <li><router-link to="/Search"><fa icon="search"></fa></router-link></li>
         <li><router-link to="/Cart"><fa icon="shopping-cart"></fa></router-link></li>
+        <li>
+          <router-link to="/Cart" id="user"><fa icon="user"></fa></router-link>
+          <ul class="user-menu">
+            <li><router-link to="/Login">Login</router-link></li>
+            <li><router-link to="/LogOut">Logout</router-link></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -58,14 +65,27 @@ ul li h1{
   text-transform: uppercase;
   font-size: 100%;
   color: white;
+  transition: ease-in-out 0.2s;
 }
-ul li:nth-last-of-type(-n+2){
+ul li:nth-last-of-type(-n+3){
   max-width: 100px;
   color: white;
 }
-li:hover{
-  color: white;
-  cursor: pointer;
+ul li h1:hover{
+  color: brown;
 }
-
+.user-menu{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7%;
+  margin: 0;
+  padding: 0;
+  background-color: #97a8975b;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+}
+.user-menu:hover ,#user:hover + .user-menu{
+  opacity: 1;  
+}
 </style>

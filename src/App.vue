@@ -30,16 +30,8 @@
 
     <main id="page-wrap">
 
-      <!-- <router-link to="/Home">
-        <img alt="page logo" src="./assets/logo.png" style="
-        width: 10%;
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 10px;
-        margin-left: -50%;">
-      </router-link> -->
       <Nav id="desktop_nav"/>
       <font-awesome-icon icon="user-secret" />
-      <!-- <fa icon="chevron-left" id="arrow-back" @click="$router.go(-1)"></fa> -->
       <router-view/>
 
       <Footer/>
@@ -55,6 +47,7 @@ import Footer from './components/footer.vue';
 import pushrotate from './components/Menu/pushRotate.vue';
 import scalerotate from './components/Menu/scaleRotate.vue';
 import Menu from './components/Menu';
+import carousel from './components/Carousel.vue';
 
 export default {
   name: 'App',
@@ -63,7 +56,8 @@ export default {
     Footer,
     pushrotate,
     scalerotate,
-    Menu
+    Menu,
+    carousel
   },
   data() {
     return{
