@@ -45,7 +45,6 @@
 import Nav from './components/nav.vue';
 import Footer from './components/footer.vue';
 import pushrotate from './components/Menu/pushRotate.vue';
-import scalerotate from './components/Menu/scaleRotate.vue';
 import Menu from './components/Menu';
 import carousel from './components/Carousel.vue';
 
@@ -55,7 +54,6 @@ export default {
     Nav,
     Footer,
     pushrotate,
-    scalerotate,
     Menu,
     carousel
   },
@@ -94,7 +92,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: black;
+  color: white;
   background-image: url("./assets/banner-product.jpg");
   background-attachment: fixed;
   background-position: center;

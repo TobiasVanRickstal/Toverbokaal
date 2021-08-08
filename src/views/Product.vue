@@ -10,7 +10,7 @@
                 ></carousel>
             </div>
             <div class="product-info">
-                <p class="cartegory">Category</p>
+                <h2 class="category">Category</h2>
                 <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat recusandae placeat quae perspiciatis quidem minima tempore dicta nemo soluta, culpa quam corrupti sint ut. Dolor sed necessitatibus excepturi fuga molestias?</p>
                 <p class="price">€ {{ state.product_item.price }}</p>
             </div>
@@ -79,6 +79,9 @@ export default {
     }
     .product-info{
         width: 50%;
+    }
+    .category{
+        margin: 80px;
     }
     .description{
         text-align: justify;
