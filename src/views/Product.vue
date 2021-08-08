@@ -65,7 +65,7 @@ export default {
         margin-top: 100px;
         display: flex;
         justify-content: space-evenly;
-        align-items: flex-end;
+        align-items: center;
         padding-bottom: 100px;
     }
     .product-image{

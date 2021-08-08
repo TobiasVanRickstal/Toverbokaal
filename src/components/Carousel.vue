@@ -1,7 +1,7 @@
 <template>
     <div class="card-carousel">
         <div class="card-img">
-            <img :src="currentImage" alt="">
+            <img :src="require(`../assets/terrarium00${currentImage}.jpg`)" :alt="currentImage">
             <div class="actions">
                 <span @click="prevImage" class="prev">
                     &#8249;
@@ -18,7 +18,7 @@
                 :class="['thumbnail-image', (activeImage == index) ? 'active' : '']"
                 @click="activateImage(index)"
             >
-                <img :src="image.thumb">
+                <img :src="require(`../assets/terrarium00${image.id}.jpg`)">
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@ export default {
                 { id: 5, big: "../assets/terrarium005.jpg", thumb: "../assets/terrarium005.jpg"},
             ],
             //Index of the active image
-            activeImage: 0
+            activeImage: 1
         }
     },
     computed: {
@@ -46,7 +46,7 @@ export default {
         // and is the reason why we don't have to worry about the 
         // big image getting updated
         currentImage() {
-            return this.images[this.activeImage].big;
+            return this.images[this.activeImage].id;
         },
     },
     methods: {
@@ -78,7 +78,7 @@ export default {
             this.activeImage = this.startingImage;
         }
     },
-    props: ['startingImage', 'autoSlideInterval', 'showProgressBar']
+    props: ['startingImage']
 }
 </script>
 
@@ -103,8 +103,8 @@ export default {
 }
 
 .thumbnail-image > img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100px;
     transition: all 250ms;
 }
 
@@ -122,6 +122,8 @@ export default {
 .card-img > img {
     display: block;
     margin: 0 auto;
+    width: auto;
+    height: 500px;
 }
 
 .actions {
@@ -141,6 +143,9 @@ export default {
     cursor: pointer;
     transition: all 250ms;
     font-size: 45px;
+    border: 2px solid white;
+    line-height: 0%;
+    padding: 15px 5px 23px 6px;
 }
 
 .actions > span.prev {
@@ -152,6 +157,6 @@ export default {
 }
 
 .actions > span:hover {
-    transform:scale(2);
+    transform:scale(1.5);
 }
 </style>
