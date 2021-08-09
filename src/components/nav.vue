@@ -11,7 +11,7 @@
         <li><router-link to="/Care"><h1>care</h1></router-link></li>
         <li><router-link to="/About"><h1>about</h1></router-link></li>
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
-        <li><router-link to="/Search"><fa icon="search"></fa></router-link></li>
+        <li id="search" v-on:click="showSearch()"><fa icon="search"></fa></li>
         <li><router-link to="/Cart"><fa icon="shopping-cart"></fa></router-link></li>
         <li>
           <router-link to="/Cart" id="user"><fa icon="user"></fa></router-link>
@@ -21,6 +21,7 @@
           </ul>
         </li>
       </ul>
+      <input type="text" id="search-input" placeholder="Search">
     </div>
   </div>
   
@@ -73,6 +74,15 @@ ul li:nth-last-of-type(-n+3){
 }
 ul li h1:hover{
   color: brown;
+}
+#search{
+  cursor: pointer;
+}
+#search:hover{
+  color: brown;
+}
+#search-input{
+   
 }
 .user-menu{
   display: flex;

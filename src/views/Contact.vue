@@ -7,15 +7,15 @@
         <div class="form">
             <form action="">
                 <div class="input">
-                    <label for="">Name</label><br>
-                    <input type="text" id="name" placeholder="name">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" placeholder="Name">
                 </div>
                 <div class="input">
-                    <label for="">Last name</label><br>
-                    <input type="text" id="lastName" placeholder="Last Name">
+                    <label for="last-name">Last name</label><br>
+                    <input type="text" id="last-name" placeholder="Last Name">
                 </div>
                 <div class="input">
-                    <label for="">E-mail</label><br>
+                    <label for="email">E-mail</label><br>
                     <input type="email" id="email" placeholder="Email">
                 </div>
                 <div class="textarea">
@@ -31,10 +31,10 @@
             <h2>The form isn't really your style?</h2>
             <h3>Contact information</h3>
             <div class="table">
-                <p>E-mail: contact@toverbokaal.com</p>      
+                <p>E-mail: <a href="mailto:contact@toverbokaal.com">contact@toverbokaal.com</a></p>      
                 <p>Phone: 04/12345678</p>   
-                <p>Instagram: https://www.instagram.com/toverbokaal/</p>   
-                <p>Facebook: https://www.facebook.com/toverbokaal/</p>
+                <p>Instagram: <a href="https://www.instagram.com/toverbokaal/">https://www.instagram.com/toverbokaal/</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/toverbokaal/">https://www.facebook.com/toverbokaal/</a></p>
             </div>
         </div>
     </div>
@@ -62,10 +62,15 @@ export default {
     .input input{
         width: 30%;
         margin: 10px;
+        padding: 5px 0;
     }
     .textarea textarea{
         width: 30%;
+        height: 100px;
         margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
     .submit{
         width: 75%;
@@ -81,6 +86,10 @@ export default {
         letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: bold;
+        cursor: pointer;
+    }
+    .submit input:hover {
+        background-color: rgba(5, 5, 5, 0.1);
     }
     .extraInfo{
         width: 75%;
@@ -89,7 +98,7 @@ export default {
         margin-bottom: 50px;
     }
     .table{
-        width: 50%;
+        width: 60%;
         margin: auto;
         margin-top: 50px;
         text-align: left;
