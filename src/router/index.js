@@ -4,6 +4,7 @@ import Shop from '../views/Shop.vue'
 import Product from '../views/Product.vue'
 import Care from '../views/Care.vue'
 import Contact from '../views/Contact.vue'
+import About from '../views/About.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/Contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/About',
+    name: 'About',
+    component: About
   },
   {
     path: '/Product/:productId',

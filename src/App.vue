@@ -31,7 +31,13 @@
     <main id="page-wrap">
 
       <Nav id="desktop_nav"/>
-      <font-awesome-icon icon="user-secret" />
+
+      <font-awesome-icon icon="user-secret"/>
+<!-- https://stackoverflow.com/questions/56681106/vue-hide-view-components-conditionally-based-on-url -->
+      <div class="back-arrow" @click="$router.go(-1)" v-if="!isHome">
+        <fa icon="chevron-left"></fa>
+      </div>
+
       <router-view/>
 
       <Footer/>
@@ -65,6 +71,11 @@ export default {
       side: 'left',
       currentMenu: 'pushrotate'
     };
+  },
+  computed: {
+    isHome() {
+      return this.$route.name === 'Home'
+    }
   }
 }
 </script>
@@ -107,15 +118,14 @@ body{
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-#arrow-back{
+.back-arrow{
   font-size: 25px;
   position: absolute;
-  top: 21%;
-  right: 15%;
+  margin-left: 15%;
+  margin-top: 3%;
   color: white;
-  padding: 5px 11px 5px 8px;
   border: 2px solid white;
-  border-radius: 50%;
+  padding: 3px 5px;
 }
 a{
   text-decoration: none;

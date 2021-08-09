@@ -64,9 +64,9 @@
         width: 75%;
     }
     .title{
-        width: 20%;
+        width: 40%;
         padding-top: 25px;
-        margin-left: 4%;
+        margin: auto;
     }
     .container{
         display: flex;

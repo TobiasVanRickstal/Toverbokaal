@@ -55,11 +55,11 @@ export default {
     .product-view{
         background-color: #97a8975b;
         width: 75%;
-        margin: auto;
+        margin: 25px auto;
         color: white;
     }
     .product-name{
-        padding-top: 100px;
+        padding-top: 50px;
     }
     .product-container{
         margin-top: 100px;
