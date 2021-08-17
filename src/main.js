@@ -5,7 +5,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 // https://www.youtube.com/watch?v=MoDIpTuRWfM&ab_channel=SuboptimalEngineer
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 library.add(fas)
 
-createApp(App).component('fa', FontAwesomeIcon).use(router).mount('#app')
+createApp(App).use(store).component('fa', FontAwesomeIcon).use(router).mount('#app')

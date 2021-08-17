@@ -16,7 +16,7 @@
           <router-link to="/Cart" id="user"><fa icon="user"></fa></router-link>
           <ul class="user-menu">
             <li><router-link to="/Login">Login</router-link></li>
-            <li><router-link to="/LogOut">Logout</router-link></li>
+            <li id="require_logged_in"><router-link to="/LogOut">Logout</router-link></li>
           </ul>
         </li>
       </ul>
@@ -31,6 +31,9 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#require_logged_in{
+  display: none;
+}
 img{
   width: auto;
   height: 50px;
