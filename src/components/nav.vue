@@ -16,6 +16,7 @@
           <router-link to="/Cart" id="user"><fa icon="user"></fa></router-link>
           <ul class="user-menu">
             <li><router-link to="/Login">Login</router-link></li>
+            <li v-if="user">{{ user }}</li>
             <li id="require_logged_in"><router-link to="/LogOut">Logout</router-link></li>
           </ul>
         </li>
@@ -26,6 +27,21 @@
 </template>
 
 <script>
+import { useStore } from 'vuex';
+import { computed } from 'vue';
+
+export default{
+  name: 'nav',
+  setup() {
+    const store = useStore();
+
+    const user = computed(() => store.state.User.user);
+
+    return{
+      user
+    }
+  },
+}
 
 </script>
 

@@ -54,6 +54,7 @@ import pushrotate from './components/Menu/pushRotate.vue';
 import Menu from './components/Menu';
 import carousel from './components/Carousel.vue';
 
+
 export default {
   name: 'App',
   components: {
