@@ -13,7 +13,7 @@
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
         <li><router-link to="/Cart"><fa icon="shopping-cart"></fa></router-link></li>
         <li>
-          <router-link to="/Cart" id="user"><fa icon="user"></fa></router-link>
+          <router-link to="/User" id="user"><fa icon="user"></fa></router-link>
           <ul class="user-menu">
             <li><router-link to="/Login">Login</router-link></li>
             <li v-if="user">{{ user }}</li>

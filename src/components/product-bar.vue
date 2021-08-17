@@ -9,8 +9,11 @@
           <h4>{{ product.name }}</h4>
           <p>€ {{ product.price }}</p>
         </div>
-        
       </div>
+      
+  </div>
+  <div class="show_more">
+    <h3>show more</h3>
   </div>
 </template>
 
@@ -41,21 +44,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media screen and (min-width:320px) and (max-width:640px) {
-  h2{
-    width: 50%;
-    margin: 0;
-    background-color: #97a89794;
-    padding: 10% 0px 5% 0px;
-    color: white;
-    letter-spacing: 10px;
-  }
-  img{
-    width: 50%;
-  }
-}
-@media screen and (min-width:641px){
-  h2{
+
+
+h2{
   margin: 0;
   background-color: #97a8975b;
   padding: 25px 0px 25px 0px;
@@ -68,7 +59,7 @@ export default {
   margin-top: -7%;
   margin-left: 1%;
   color: white;
-  background-color: rgba(5, 5, 5, 0.1);
+  background-color: rgba(5, 5, 5, 0.2);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 600;
@@ -129,6 +120,20 @@ h4{
   margin-bottom: 5px;
   font-size: 90%;
 }
+.show_more{
+  background-color: #97a8975b;
+  padding: 20px;
+}
+.show_more h3{
+  border: 2px solid white;
+  width: 10%;
+  padding: 10px 0px;
+  margin: auto;
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
+.show_more:hover h3{
+  background-color: rgba(5, 5, 5, 0.2);
 }
 
 

@@ -137,6 +137,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     color: white;
+    background-color: none;
 }
 
 .actions > span {
@@ -158,5 +159,6 @@ export default {
 
 .actions > span:hover {
     transform:scale(1.5);
+    background-color: rgba(5, 5, 5, 0.2);
 }
 </style>

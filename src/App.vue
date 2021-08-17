@@ -127,6 +127,10 @@ body{
   color: white;
   border: 2px solid white;
   padding: 3px 5px;
+  cursor: pointer;
+}
+.back-arrow:hover{
+  background-color:rgba(5, 5, 5, 0.2);
 }
 a{
   text-decoration: none;

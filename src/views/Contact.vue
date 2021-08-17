@@ -62,15 +62,18 @@ export default {
     .input input{
         width: 30%;
         margin: 10px;
-        padding: 5px 0;
+        padding: 10px 0;
+        border: none;
     }
     .textarea textarea{
         width: 30%;
         height: 100px;
         margin: 10px;
+        padding: 5px 0;
         font-family: 'Roboto', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        border: none;
     }
     .submit{
         width: 75%;
