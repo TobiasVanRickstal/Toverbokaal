@@ -13,7 +13,8 @@
       
   </div>
   <div class="show_more">
-    <h3>show more</h3>
+    <router-link to="/shop"><h3>show more</h3></router-link>
+    
   </div>
 </template>
 

@@ -2,7 +2,8 @@ export const UserModule = {
     namespace: true,
 
     state: {
-        user: null
+        user: null,
+        username: "Frederik"
       },
       //mutations are functions that effect the state
       mutations: {

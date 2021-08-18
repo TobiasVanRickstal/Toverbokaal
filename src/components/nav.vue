@@ -11,10 +11,11 @@
         <li><router-link to="/Care"><h1>care</h1></router-link></li>
         <li><router-link to="/About"><h1>about</h1></router-link></li>
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
-        <li><router-link to="/Cart"><fa icon="shopping-cart"></fa></router-link></li>
-        <li>
-          <router-link to="/User" id="user"><fa icon="user"></fa></router-link>
-          <ul class="user-menu">
+        <li><fa class="icon" icon="shopping-cart" @click="toggleCart = !toggleCart"></fa></li>
+        <mini-cart id="mini-cart" v-if="toggleCart"/>
+        <div v-if="cart">{{ cart }}</div>
+        <li><fa class="icon" icon="user" id="user" @click="toggleUser = !toggleUser"></fa>
+          <ul class="user-menu" v-if="toggleUser">
             <li><router-link to="/Login">Login</router-link></li>
             <li v-if="user">{{ user }}</li>
             <li id="require_logged_in"><router-link to="/LogOut">Logout</router-link></li>
@@ -29,21 +30,31 @@
 <script>
 import { useStore } from 'vuex';
 import { computed } from 'vue';
+import MiniCart from './mini-cart.vue';
 
 export default{
   name: 'nav',
-  setup() {
-    const store = useStore();
-
-    const user = computed(() => store.state.User.user);
-
-    return{
-      user
+  components: { MiniCart},
+  data() {
+    return {
+      toggleCart: false,
+      toggleUser: false
     }
   },
-}
+  setup() {
+    const store = useStore();
+    const user = computed(() => store.state.User.user);
+    const cart = computed(() => store.state.Cart.cart);
 
+    return{
+      cart,
+      user
+    }
+    
+  },
+}
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -92,24 +103,25 @@ ul li:nth-last-of-type(-n+3){
 ul li h1:hover{
   color: brown;
 }
-#search{
-  cursor: pointer;
-}
-#search:hover{
-  color: brown;
-}
 .user-menu{
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 7.3%;
+  right: 1.5%;
   margin: 0;
   padding: 0;
   background-color: #97a8975b;
-  opacity: 0;
-  transition: ease-in-out 0.2s;
 }
-.user-menu:hover ,#user:hover + .user-menu{
-  opacity: 1;  
+.icon{
+  cursor: pointer;
+}
+.icon:hover {
+  color: brown;
+}
+#mini-cart{
+  position: absolute;
+  top: 7.3%;
+  right: 9%;
 }
 </style>

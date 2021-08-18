@@ -62,7 +62,7 @@ export default {
     Footer,
     pushrotate,
     Menu,
-    carousel
+    carousel,
   },
   data() {
     return{

@@ -2,7 +2,7 @@
     <div class="contact">
         <div>
             <h1>Contact</h1>
-            <h2>Don't hesitate to contact me, doesn't mather what you want to know</h2>
+            <h3>Don't hesitate to contact me, it doesn't mather what you want to know</h3>
         </div>
         <div class="form">
             <form action="">
@@ -62,7 +62,7 @@ export default {
     .input input{
         width: 30%;
         margin: 10px;
-        padding: 10px 0;
+        padding: 5px 0;
         border: none;
     }
     .textarea textarea{

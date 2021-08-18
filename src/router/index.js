@@ -6,7 +6,10 @@ import Care from '../views/Care.vue'
 import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
 import Admin from '../views/Admin.vue'
+import Login from '../views/Login.vue'
 import store from '../store'
+
+
 
 const routes = [
   {
@@ -35,6 +38,11 @@ const routes = [
     component: Contact
   },
   {
+    path: '/Login',
+    name: 'Login',
+    component: Login
+  },
+  {
     path: '/About',
     name: 'About',
     component: About
@@ -61,10 +69,14 @@ const router = createRouter({
 
 router.beforeEach(async(to,from,next) => {
   const user= store.state.User.user;
+  const cart= store.state.Cart.cart;
 
   if (!user) {
-    await store.dispatch('setUser', 'GET_USER')
+    await store.dispatch('setUser', store.state.User.username)
     // await store.dispatch('User/setUser', 'GET_USER')
+  }
+  if (cart){
+    await store.dispatch('addCart', store.state.Cart.cart)
   }
 
   const isAdmin = true;

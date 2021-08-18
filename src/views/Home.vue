@@ -32,7 +32,7 @@ export default {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    padding: 8% 0px 8%;
+    padding: 7.2% 0px 7%;
     display: flex;
     justify-content: center;
     align-content: center;
