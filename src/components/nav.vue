@@ -15,8 +15,10 @@
         <mini-cart id="mini-cart" v-if="toggleCart"/>
         <li><fa class="icon" icon="user" id="user" @click="toggleUser = !toggleUser"></fa>
           <ul class="user-menu" v-if="toggleUser">
-            <li><router-link to="/Login">Login</router-link></li>
-            <li v-if="user">{{ user }}</li>
+            <!-- <li v-for="user in users" :key="user">{{ user.username }}</li> -->
+            <li v-if="users">{{ users[userID].username }}</li>
+            <li v-if="users"><router-link to="/">Logout</router-link></li>
+            <li v-else><router-link to="/Login">Login</router-link></li>
             <li id="require_logged_in"><router-link to="/LogOut">Logout</router-link></li>
           </ul>
         </li>
@@ -37,19 +39,17 @@ export default{
   data() {
     return {
       toggleCart: false,
-      toggleUser: false
+      toggleUser: false,
+      userID: 1
     }
   },
   setup() {
     const store = useStore();
-    const user = computed(() => store.state.User.username);
-    const cart = computed(() => store.state.Cart.cart);
+    const users = computed(() => store.state.User.user);
 
     return{
-      cart,
-      user
+      users
     }
-    
   },
 }
 </script>

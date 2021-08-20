@@ -6,6 +6,7 @@ import Care from '../views/Care.vue'
 import Contact from '../views/Contact.vue'
 import About from '../views/About.vue'
 import Admin from '../views/Admin.vue'
+import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import store from '../store'
 
@@ -40,7 +41,12 @@ const routes = [
   {
     path: '/Login',
     name: 'Login',
-    component: Login
+    component: Login,
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/About',

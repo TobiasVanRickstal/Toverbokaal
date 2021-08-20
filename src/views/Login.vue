@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="login">
         <div>
             <h1>Login</h1>
         </div>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.contact{
+.login{
     width: 75%;
     margin: 25px auto;
     background-color: #97a8975b;

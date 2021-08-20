@@ -70,7 +70,7 @@ export default {
         pushRotate : { buttonText: 'Push Rotate'}
       },
       side: 'left',
-      currentMenu: 'pushrotate'
+      currentMenu: 'pushrotate',
     };
   },
   computed: {

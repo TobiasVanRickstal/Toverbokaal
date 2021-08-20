@@ -2,7 +2,7 @@
     <div class="dropdown">
         <div class="items" v-for="(product, index) in cart" v-bind:item="product" v-bind:index="index" v-bind:key="product.id">
             <div class="item">
-                <img src="../assets/terrarium003.jpg" alt="item_title" class="align-left">
+                <img :src="require(`../assets/terrarium00${product.id}.jpg`)" alt="item_title" class="align-left">
                 <div class="item-info">
                     <p>{{ product.name }}</p>
                     <p class="priceDelete">1x € {{ product.price}}<a href=""><fa icon="trash-alt"></fa></a></p>
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="total">
-            <p>Total : €10</p>
+            <p>Total : € {{ total }}</p>
             <router-link to="/Cart">go to cart</router-link>
         </div>
     </div>
@@ -23,16 +23,24 @@
 export default {
     name: 'mini-cart',
     data() {
-
+        
     },
     setup() {
         const store = useStore();
         const cart = computed(() => store.state.Cart.cart);
+        // var images = "../assets/terrarium00" . {{product.id}} . ".jpg";
 
         return{
             cart,
         }
     },
+    computed: {
+        total () {//https://forum.vuejs.org/t/v-for-total-sum-cant-get-it-right/26986
+            return this.cart.reduce( (sum, product) => {
+            return sum + (product.price)
+            }, 0)
+        }
+    }
 }
 </script>
 

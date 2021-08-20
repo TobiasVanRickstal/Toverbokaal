@@ -2,8 +2,8 @@ export const UserModule = {
     namespace: true,
 
     state: {
-        user: null,
-        username: "Frederik"
+        user: [ {id: 1, username: 'Tobias', email: 'test@test.be', password: '*****'},
+        {id: 2, username: 'Sarah', email: 'test@test.be', password: '*****'}]
       },
       //mutations are functions that effect the state
       mutations: {
