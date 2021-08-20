@@ -12,10 +12,10 @@ export const CartList = {
           state.user = user;
         },
         GET_PRODUCT(state, product){
-          product = product;
+          state.product += product;
         },
-        ADD_CART(state, cart){
-          cart += product[1];
+        ADD_CART(state, product){
+          state.cart += product;
         }
       },
       //actions are functions that you call throughout your application that call mutations
