@@ -4,7 +4,7 @@
             <h1>Login</h1>
         </div>
         <div class="form">
-            <form action="">
+            <form action="" method="POST">
                 <div class="input">
                     <label for="username">Username</label><br>
                     <input type="text" id="username" placeholder="Username">
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-    
+   
 }
 </script>
 

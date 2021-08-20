@@ -13,7 +13,7 @@
       
   </div>
   <div class="show_more">
-    <router-link to="/shop"><h3>show more</h3></router-link>
+    <router-link to="/shop"><h3>show all products</h3></router-link>
     
   </div>
 </template>
@@ -127,7 +127,7 @@ h4{
 }
 .show_more h3{
   border: 2px solid white;
-  width: 10%;
+  width: 20%;
   padding: 10px 0px;
   margin: auto;
   transition: ease-in 0.2s;

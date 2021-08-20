@@ -13,7 +13,6 @@
         <li><router-link to="/Contact"><h1>contact</h1></router-link></li>
         <li><fa class="icon" icon="shopping-cart" @click="toggleCart = !toggleCart"></fa></li>
         <mini-cart id="mini-cart" v-if="toggleCart"/>
-        <div v-if="cart">{{ cart }}</div>
         <li><fa class="icon" icon="user" id="user" @click="toggleUser = !toggleUser"></fa>
           <ul class="user-menu" v-if="toggleUser">
             <li><router-link to="/Login">Login</router-link></li>
@@ -43,7 +42,7 @@ export default{
   },
   setup() {
     const store = useStore();
-    const user = computed(() => store.state.User.user);
+    const user = computed(() => store.state.User.username);
     const cart = computed(() => store.state.Cart.cart);
 
     return{

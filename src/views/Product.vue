@@ -13,7 +13,6 @@
                 <h2 class="category">Category</h2>
                 <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat recusandae placeat quae perspiciatis quidem minima tempore dicta nemo soluta, culpa quam corrupti sint ut. Dolor sed necessitatibus excepturi fuga molestias?</p>
                 <p class="price">€ {{ state.product_item.price }}</p>
-                <p class="addItem">Add to cart</p>
             </div>
         </div>
     </div>
@@ -28,6 +27,11 @@ export default {
   name: 'Product',
   components: {
     Carousel
+  },
+  methods: {
+      addToCart () {
+          
+      },
   },
   
   setup() {
@@ -49,7 +53,7 @@ export default {
         state,
         productId
     }
-  }
+  },
 }
 </script>
 <style scoped>
@@ -93,6 +97,7 @@ export default {
         padding: 10px 5px;
         border: 2px solid white;
         color: white;
+        background-color: transparent;
         float: right;
         cursor: pointer;
     }
