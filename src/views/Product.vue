@@ -21,6 +21,7 @@
 <script>
 import { reactive,computed } from 'vue';
 import { useRoute} from 'vue-router';
+// import { useStore} from 'vuex';
 import Carousel from '../components/Carousel.vue';
 
 export default {
@@ -35,9 +36,11 @@ export default {
   },
   
   setup() {
-
+    // const store = useStore();
     const route = useRoute();
     const productId = computed(() => route.params.productId);
+    // const productId = productID.value;
+    // const cart = computed(() => store.state.Cart.cart);
 
     const products = [
         {"id": 1, "name": 'Waterfall V 1.0', "price": 70, "available": true},
@@ -51,8 +54,10 @@ export default {
     })
     return {
         state,
-        productId
+        productId, 
+        // cart
     }
+    // alert(productId)
   },
 }
 </script>
@@ -80,6 +85,7 @@ export default {
     }
     .product-image img{
         width: auto;
+        max-width: 250px;
         height: 450px;
     }
     .product-info{

@@ -5,7 +5,7 @@
                 <img :src="require(`../assets/terrarium00${product.id}.jpg`)" alt="item_title" class="align-left">
                 <div class="item-info">
                     <p>{{ product.name }}</p>
-                    <p class="priceDelete">1x € {{ product.price}}<a href=""><fa icon="trash-alt"></fa></a></p>
+                    <p class="priceDelete">1x € {{ product.price}}<button v-on:click="removeElement(index)"><fa icon="trash-alt"></fa></button></p>
                 </div>
             </div>
         </div>
@@ -22,9 +22,6 @@
 
 export default {
     name: 'mini-cart',
-    data() {
-        
-    },
     setup() {
         const store = useStore();
         const cart = computed(() => store.state.Cart.cart);
@@ -33,13 +30,26 @@ export default {
         return{
             cart,
         }
+        
+    },
+     data() {
+        
     },
     computed: {
         total () {//https://forum.vuejs.org/t/v-for-total-sum-cant-get-it-right/26986
             return this.cart.reduce( (sum, product) => {
             return sum + (product.price)
             }, 0)
-        }
+        },
+    },
+    methods:{
+        removeElement: function(index){
+            if(confirm("Do you really want to delete?")){
+                // https://stackoverflow.com/questions/54156534/how-to-create-alert-confirm-box-in-vue
+                this.cart.splice(index, 1);
+                // https://stackoverflow.com/questions/35459010/vuejs-remove-element-from-lists
+            }
+        },
     }
 }
 </script>

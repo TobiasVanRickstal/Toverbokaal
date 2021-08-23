@@ -59,7 +59,7 @@ const routes = [
     component: Product
   },
   {
-    path: '/Admin',
+    path: '/Admin/',
     name: 'Admin',
     component: Admin,
     meta: {

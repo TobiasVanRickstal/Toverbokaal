@@ -123,7 +123,9 @@ export default {
     display: block;
     margin: 0 auto;
     width: auto;
+    max-width: 350px;
     height: 500px;
+    object-fit: cover;
 }
 
 .actions {

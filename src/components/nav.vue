@@ -17,9 +17,8 @@
           <ul class="user-menu" v-if="toggleUser">
             <!-- <li v-for="user in users" :key="user">{{ user.username }}</li> -->
             <li v-if="users">{{ users[userID].username }}</li>
-            <li v-if="users"><router-link to="/">Logout</router-link></li>
-            <li v-else><router-link to="/Login">Login</router-link></li>
-            <li id="require_logged_in"><router-link to="/LogOut">Logout</router-link></li>
+            <li v-if="users"><router-link to="/Login">Logout</router-link></li>
+            <li v-else><router-link to="/Login" @click="$router.go(-1)">Login</router-link></li>
           </ul>
         </li>
       </ul>
@@ -51,15 +50,15 @@ export default{
       users
     }
   },
+  methods: {
+    
+  }
 }
 </script>
 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#require_logged_in{
-  display: none;
-}
 img{
   width: auto;
   height: 50px;
